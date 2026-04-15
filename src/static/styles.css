@@ -16,12 +16,60 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+#auth-widget {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+#auth-panel {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 220px;
+  background-color: white;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  padding: 12px;
+  z-index: 20;
+}
+
+#auth-status {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#auth-panel button {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.icon-btn {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 header h1 {
@@ -55,6 +103,12 @@ section h3 {
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
   color: #1a237e;
+}
+
+.admin-note {
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 14px;
 }
 
 .activity-card {
@@ -190,6 +244,42 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: min(440px, 90vw);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-color: #ddd;
+  color: #1a237e;
+  background-color: #f3f4ff;
+}
+
+.close-btn:hover {
+  background-color: #e4e7ff;
 }
 
 footer {
